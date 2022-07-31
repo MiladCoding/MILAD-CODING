@@ -487,7 +487,7 @@ header.sticky{
     background: #8067f0eb;
     width: 64%;
     margin: 100px auto;
-    padding: 70px 150px;
+    padding: 70px 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -497,7 +497,7 @@ header.sticky{
     background-size: cover;
 }
 .center h3{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 500;
     margin-bottom: 3px;
     color: var(--bg-color);
@@ -571,8 +571,8 @@ header.sticky{
         transition: .3s;
     }
     :root{
-        --big-font: 4rem;
-        --h2-font: 2.3rem;
+        --big-font: 2rem;
+        --h2-font: 1.5rem;
         --p-font: 1rem;
         transition: .3s;
     }
@@ -636,8 +636,8 @@ header.sticky{
         margin-bottom: 30px;
     }
     :root{
-        --big-font:3.4rem;
-        --h2-font:2rem;
+        --big-font:2.5rem;
+        --h2-font:1.45rem;
     }
     section{
         padding: 65px 3%;
