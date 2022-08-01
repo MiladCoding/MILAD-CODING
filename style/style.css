@@ -24,6 +24,7 @@ body{
 header{
     position: fixed;
     width: 100%;
+    height: 80px;
     top: 0;
     right: 0;
     z-index: 1000;
@@ -31,8 +32,48 @@ header{
     align-items: center;
     justify-content: space-between;
     background: transparent;
-    padding: 30px 18%;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    padding: 30px 8%;
     transition: .3s;
+}
+/*search*/
+.search-box{
+    max-width: 240px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 0.7rem;
+    padding: 8px 15px;
+    background: var(--second-color);
+    border-radius: 4rem;
+    margin-right: 1rem;
+}
+.search-box .bx{
+    font-size: 1.1rem;
+}
+.search-box .bx:hover{
+    color: var(--main-color);
+    transform: scale(1.5);
+    transition: 0.3s;
+}
+#search-input{
+    width: 100%;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    background: transparent;
+    font-size: 0.938rem;
+}
+/*user*/
+.user{
+    display: flex;
+}
+.user-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
 }
 .logo img{
     max-width: 100%;
@@ -50,7 +91,7 @@ header{
     font-size: var(--p-font);
     color: var(--text-color);
     font-weight: 500;
-    padding: 10px 27px;
+    padding: 10px 20px;
 }
 .navlist a::after{
     content: '';
@@ -91,83 +132,6 @@ header{
     border: 2px solid var(--main-color);
     color: var(--bg-color);
 }
-ul {
-    list-style: none;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-inline-start: 0;
-  }
-  .dropdown {
-    position: absolute;
-    right: 1000px;
-    bottom: 200px;
-  }
-  .label {
-    cursor: pointer;
-    background: rgb(236, 205, 205);
-    padding: 0.8rem 1rem;
-    width: 100%;
-    display: block;
-    box-sizing: border-box;
-    transition: all 0.3s;
-  }
-  
-  .items a {
-    color: #fff;
-    display: flex;
-    align-items: center;
-    position: center;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    transition: all 0.2s;
-  }
-  .items a:hover {
-    border-left: 5px solid;
-    background: rgb(222, 45, 45);
-  }
-  
-  .fa-brands,
-  .fa-solid {
-    margin-left: 10px;
-  }
-  
-  .items {
-    background: rgb(248, 168, 168);
-    opacity: 0;
-    visibility: hidden;
-    min-width: 100%;
-    height: 0;
-    position: absolute;
-    top: 48px;
-    transform-origin: top;
-    transform: scaleY(0);
-    transition: transform 0.3s;
-  }
-  
-  .items::before {
-    content: "";
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background: var(--main-color);
-    transform: rotate(45deg);
-    top: -7px;
-    right: 20px;
-    z-index: -1;
-  }
-  
-  .dropdown:hover > .items {
-    opacity: 1;
-    visibility: visible;
-    height: unset;
-    transform: scaleY(1);
-  }
-  
-  .dropdown:hover > .label {
-    background: var(--main-color);
-    color: white;
-  }
-
 section{
     padding: 100px 18%;
 }
@@ -248,13 +212,13 @@ span{
 }
 header.sticky{
     background: var(--bg-color);
-    padding: 13px 18%;
+    padding: 13px 8%;
     box-shadow: 0px 0px 10px rgb(0, 0, 0 / 10%);
 }
 .items{
     display: grid;
-    /* grid-template-columns: repeat(auto-fit,minmax(220px,auto)); */
-    grid-gap: 1.3rem;
+    grid-template-columns: repeat(auto-fit,minmax(220px,auto));
+    grid-gap: 2rem;
     align-items: center;
     text-align: center;
 }
@@ -610,6 +574,9 @@ header.sticky{
     }
     .navlist.active{
         top: 100%;
+    }
+    .top-btn{
+        visibility: hidden;
     }
 }
 @media(max-width:800px){
