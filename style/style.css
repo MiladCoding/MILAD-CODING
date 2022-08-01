@@ -547,6 +547,7 @@ header.sticky{
     }
     .home{
         min-height: 80vh;
+        background: none;
     }
     .navlist{
         position: absolute;
