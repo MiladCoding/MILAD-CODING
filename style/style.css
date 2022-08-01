@@ -139,7 +139,6 @@ section{
     min-height: 100vh;
     height: 100%;
     width: 100%;
-    background: url(background.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -547,7 +546,6 @@ header.sticky{
     }
     .home{
         min-height: 80vh;
-        background: none;
     }
     .navlist{
         position: absolute;
@@ -585,7 +583,6 @@ header.sticky{
         grid-template-columns: 1fr;
         min-height: 130vh;
         grid-gap: 1rem;
-        background: none;
     }
     .home-text{
         padding-top: 55px;
